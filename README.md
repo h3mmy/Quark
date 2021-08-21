@@ -1,6 +1,6 @@
 # K3s via Flux
 
-![Tag](https://img.shields.io/github/v/tag/h3mmy/quark)
+![Tag](https://img.shields.io/github/v/tag/h3mmy/quark?style=for-the-badge)
 [![k3s](https://img.shields.io/badge/k3s-v1.21.2-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
 
 Copied from template below this line
