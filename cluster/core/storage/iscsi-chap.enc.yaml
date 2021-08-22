@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Secret
 metadata:
     name: chap-secret
-    namespace: storage
+    namespace: auth
 type: kubernetes.io/iscsi-chap
 data:
     node.session.auth.username: ENC[AES256_GCM,data:WfxnV5+9qV4TdgXqiS5MSxPANtkypKAzJIt+eco1k0OF8Tj/ASd1/AYj4sr11Zi9bkkIvyNLwDGedl12xMBBKfmsaozcrULgP4rVqXEYGvkj4UgoAeu8ZroeG2LRitZvXHJDTQHqJjtR9bD2,iv:mJoZWkIlikO7LP+QlLQlkI4SsfUSI50eTL9ctY6ozOk=,tag:8woKgQDz2xe7SMgA9eHHCg==,type:str]

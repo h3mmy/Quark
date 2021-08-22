@@ -41,7 +41,7 @@ spec:
     postgresql:
       enabled: true
     persistence:
-      data:
+      config:
         enabled: true
-        accessMode: ReadWriteOnce
-        size: 1Gi
+        volumeName: fermion-block
+        storageClassName: iscsipd
