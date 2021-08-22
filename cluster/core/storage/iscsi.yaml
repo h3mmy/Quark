@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: iscsipd
+  namespace: storage
+spec:
+  containers:
+  - name: iscsipd-rw
+    image: kubernetes/pause
+    volumeMounts:
+    - mountPath: "/mnt/iscsipd"
+      name: fermion-block
+  volumes:
+  - name: fermion-block
+    iscsi:
+      targetPortal: ${ISCSI_TARGET}
+      iqn: ${ISCSI_IQN}
+      lun: 0
+      fsType: ext4
+      readOnly: false
+      chapAuthDiscovery: true
+      chapAuthSession: true
+      secretRef:
+         name: chap-secret

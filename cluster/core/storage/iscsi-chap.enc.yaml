@@ -1,0 +1,10 @@
+# yamllint disable
+apiVersion: v1
+kind: Secret
+metadata:
+  name: chap-secret
+  namespace: storage
+type: "kubernetes.io/iscsi-chap"
+data:
+  node.session.auth.username: ocid1.volume.oc1.iad.abuwcljt6h7bqxu7nefp2ijleidigwsjx63hd6g56qnvr6sxxnwgezmasqoa
+  node.session.auth.password: ***REMOVED***
