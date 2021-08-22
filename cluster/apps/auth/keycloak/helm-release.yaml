@@ -40,8 +40,7 @@ spec:
           - "auth.${SECRET_DOMAIN}"
     postgresql:
       enabled: true
-    persistence:
-      config:
+      persistence:
         enabled: true
-        volumeName: fermion-block
-        storageClassName: iscsipd
+    persistence:
+      deployPostgres: true
