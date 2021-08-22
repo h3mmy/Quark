@@ -17,7 +17,6 @@ spec:
       targetPortal: ${ISCSI_TARGET}
       iqn: ${ISCSI_IQN}
       lun: 0
-      fsType: ext4
       readOnly: false
       chapAuthDiscovery: true
       chapAuthSession: true
