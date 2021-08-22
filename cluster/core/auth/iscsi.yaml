@@ -8,8 +8,8 @@ spec:
   containers:
   - name: iscsipd-rw
     image: kubernetes/pause
-    volumeMounts:
-    - mountPath: "/mnt/iscsipd"
+    volumeDevices:
+    - mountPath: "/dev/oracleoci/oracledb"
       name: fermion-block
   volumes:
   - name: fermion-block
