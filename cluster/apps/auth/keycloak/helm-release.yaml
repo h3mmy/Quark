@@ -20,6 +20,8 @@ spec:
     image:
       repository: docker.io/jboss/keycloak
       tag: latest
+    args:
+      - "--platform=linux/amd64"
     env:
       TZ: "America/New_York"
     ingress:
