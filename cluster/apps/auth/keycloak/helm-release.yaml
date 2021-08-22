@@ -42,5 +42,6 @@ spec:
       enabled: true
       persistence:
         enabled: true
+        existingClaim: postgres-pvc
     persistence:
       deployPostgres: true
