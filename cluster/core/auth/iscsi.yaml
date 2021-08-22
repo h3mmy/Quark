@@ -9,7 +9,7 @@ spec:
   - name: iscsipd-rw
     image: kubernetes/pause
     volumeDevices:
-    - mountPath: "/dev/sda"
+    - devicePath: "/dev/sda"
       name: fermion-block
   volumes:
   - name: fermion-block
