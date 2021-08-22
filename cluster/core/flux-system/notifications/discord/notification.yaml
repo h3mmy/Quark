@@ -5,6 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   type: discord
+  username: "Flux@QuarkyNet"
   channel: bot-general
   secretRef:
     name: discord-url
