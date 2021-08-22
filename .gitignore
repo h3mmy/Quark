@@ -7,3 +7,5 @@ Thumbs.db
 kubeconfig
 # vscode-sops
 .decrypted~*.yaml
+# BFG Reports
+..bfg-report/*
