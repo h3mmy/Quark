@@ -1,0 +1,47 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: keycloak
+  namespace: auth
+spec:
+  interval: 30m
+  chart:
+    spec:
+      # renovate: registryUrl=https://codecentric.github.io/helm-charts
+      chart: keycloak
+      version: 14.0.1
+      sourceRef:
+        kind: HelmRepository
+        name: codecentric-charts
+        namespace: flux-system
+      interval: 5m
+  values:
+    image:
+      repository: docker.io/jboss/keycloak
+      tag: latest
+    env:
+      TZ: "America/New_York"
+    ingress:
+      main:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: "nginx"
+          hajimari.io/enable: "true"
+          # nginx.ingress.kubernetes.io/auth-url: "https://auth.${SECRET_DOMAIN}/oauth2/auth"
+          # nginx.ingress.kubernetes.io/auth-signin: "https://auth.${SECRET_DOMAIN}/oauth2/start"
+        hosts:
+        - host: "auth.${SECRET_DOMAIN}"
+          paths:
+          - path: /
+            pathType: Prefix
+        tls:
+        - hosts:
+          - "auth.${SECRET_DOMAIN}"
+    postgresql:
+      enabled: true
+    persistence:
+      data:
+        enabled: true
+        accessMode: ReadWriteOnce
+        size: 1Gi

@@ -75,6 +75,9 @@ spec:
           paths:
           - path: /
             pathType: Prefix
+        tls:
+        - hosts:
+          - "homer.${SECRET_DOMAIN}"
     persistence:
       data:
         enabled: true
