@@ -39,10 +39,14 @@ spec:
         tls:
         - hosts:
           - "auth.${SECRET_DOMAIN}"
-    postgresql:
-      enabled: true
-      persistence:
-        enabled: true
-        existingClaim: postgres-pvc
-        selector: pv-volume
+    # postgresql:
+    #   enabled: true
+    #   persistence:
+    #     enabled: true
+    #     existingClaim: postgres-pvc
+    #     selector: pv-volume
+    persistence:
+      deployPostgres: true
+      dbVendor: postgres
+      existingClaim: postgres-pvc
         
