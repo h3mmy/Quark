@@ -39,9 +39,6 @@ spec:
         tls:
         - hosts:
           - "auth.${SECRET_DOMAIN}"
-    persistence:
-      deployPostgres: true
-      existingClaim: postgres-pvc
-      mountPath: /postgres
+    
   
         
