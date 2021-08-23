@@ -14,4 +14,5 @@ spec:
   hostPath:
     path: "/mnt/vol1"
   claimRef:
-    name: da
+    name: data-keycloak-postgresql-0
+    namespace: auth
