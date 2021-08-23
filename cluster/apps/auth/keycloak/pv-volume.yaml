@@ -13,3 +13,5 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: "/mnt/vol1"
+  claimRef:
+    name: da
