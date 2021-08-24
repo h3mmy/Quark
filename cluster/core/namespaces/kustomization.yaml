@@ -5,4 +5,5 @@ resources:
 - metallb-system.yaml
 - networking.yaml
 - auth.yaml
+- longhorn-system.yaml
 

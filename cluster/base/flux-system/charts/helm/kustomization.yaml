@@ -8,3 +8,5 @@ resources:
 - metallb-charts.yaml
 - hajimari-charts.yaml
 - codecentric-charts.yaml
+- longhorn-charts.yaml
+
