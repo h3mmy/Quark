@@ -6,4 +6,5 @@ resources:
 - networking.yaml
 - auth.yaml
 - longhorn-system.yaml
+- kube-system.yaml
 

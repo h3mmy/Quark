@@ -9,4 +9,5 @@ resources:
 - hajimari-charts.yaml
 - codecentric-charts.yaml
 - longhorn-charts.yaml
+- external-dns-charts.yaml
 
