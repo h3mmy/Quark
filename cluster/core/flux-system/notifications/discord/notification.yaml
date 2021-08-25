@@ -6,7 +6,7 @@ metadata:
 spec:
   type: discord
   username: "Flux@QuarkyNet"
-  channel: bot-general
+  channel: bot-alerts-quark
   secretRef:
     name: discord-url
 
