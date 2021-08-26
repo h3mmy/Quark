@@ -1,0 +1,18 @@
+---
+- hosts:
+    - master
+    - worker
+  become: true
+  gather_facts: true
+  any_errors_fatal: true
+  tasks:
+    - name: upgrade
+      ansible.builtin.apt:
+        upgrade: full
+        update_cache: true
+        cache_valid_time: 3600
+        autoclean: true
+        autoremove: true
+      register: yum_upgrade
+      retries: 5
+      until: yum_upgrade is success
