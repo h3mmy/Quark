@@ -9,3 +9,6 @@ kubeconfig
 .decrypted~*.yaml
 # BFG Reports
 ..bfg-report/*
+
+# Temporary
+ansible/
