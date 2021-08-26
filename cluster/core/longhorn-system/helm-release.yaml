@@ -20,11 +20,21 @@ spec:
     persistence:
       defaultClass: true
       defaultClassReplicaCount: 2
-      reclaimPolicy: Delete
+      reclaimPolicy: Retain
       recurringJobs:
         enable: false
         jobList: []
-
+    defaultSettings:
+      # backupstorePollInterval: 300
+      # backupTarget: nfs://${NAS_ADDR}:/volume1/LonghornBackupstore
+      createDefaultDiskLabeledNodes: true
+      defaultDataLocality: best-effort
+      nodeDownPodDeletionPolicy: delete-both-statefulset-and-deployment-pod
+      concurrentAutomaticEngineUpgradePerNodeLimit: 1
+      defaultDataPath: /var/lib/longhorn
+      defaultReplicaCount: 3
+      replicaSoftAntiAffinity: false
+      storageMinimalAvailablePercentage: 10
     ingress:
       enabled: true
       hosts:
@@ -36,10 +46,9 @@ spec:
       - hosts:
         - "lh.${SECRET_DOMAIN}"
       annotations:
-        kubernetes.io/ingress.class: nginx
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        traefik.ingress.kubernetes.io/router.middlewares: traefik-default-middlewares-chain@kubernetescrd
+        traefik.ingress.kubernetes.io/router.tls.options: traefik-secure-tlsoptions@kubernetescrd
         hajimari.io/enable: "true"
-        # nginx.ingress.kubernetes.io/auth-url: "https://auth.${SECRET_CLUSTER_DOMAIN}/oauth2/auth"
-        # nginx.ingress.kubernetes.io/auth-signin: "https://auth.${SECRET_CLUSTER_DOMAIN}/oauth2/start"
-    
     # Pod Security Policy
     enablePSP: true
