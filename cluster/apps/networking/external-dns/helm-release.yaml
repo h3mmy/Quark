@@ -34,7 +34,7 @@ spec:
     extraArgs:
       - --cloudflare-proxied
       - --annotation-filter=external-dns/is-public in (true)
-    policy: sync
+    # policy: sync
     sources:
       - ingress
     txtPrefix: "k8s."
