@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    k8s-app: kube-dns
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
+  name: coredns
+  namespace: kube-system
+  selector:
+    matchLabels:
+      eks.amazonaws.com/component: coredns
+      k8s-app: kube-dns
+  template:
+    metadata:
+      labels:
+        eks.amazonaws.com/component: coredns
+        k8s-app: kube-dns
+    spec:
+      containers: []
+      
