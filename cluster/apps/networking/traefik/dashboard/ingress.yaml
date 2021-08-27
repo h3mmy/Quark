@@ -1,3 +1,4 @@
+  
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -6,11 +7,16 @@ metadata:
   namespace: networking
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+    hajimari.io/enable: "true"
+    hajimari.io/icon: "web"
+    hajimari.io/appName: "traefik"
 spec:
   tls:
-    - secretName: "${SECRET_DOMAIN/./-}-tls"
+    - hosts:
+        - "traefik.${SECRET_DOMAIN}"
+      secretName: "${SECRET_DOMAIN/./-}-tls"
   rules:
-    - host: traefik.${SECRET_DOMAIN}
+    - host: "traefik.${SECRET_DOMAIN}"
       http:
         paths:
           - path: /
@@ -20,3 +26,4 @@ spec:
                 name: traefik
                 port:
                   number: 9000
+                  

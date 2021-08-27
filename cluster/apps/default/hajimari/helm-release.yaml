@@ -23,56 +23,59 @@ spec:
     env:
       TZ: "America/New_York"
     hajimari:
+      defaultEnable: false
       namespaceSelector:
         matchNames:
-        - default
+          - default
+          - networking
       name: "Visitor"
       customApps:
         - name: BloopNet
           url: ${BLOOPNET_URI}
           icon: test-tube
       groups:
-      - name: Communicate
-        links:
-        - name: Discord
-          url: 'https://discord.com'
-        - name: Gmail
-          url: 'http://gmail.com'
-        - name: Slack
-          url: 'https://slack.com/signin'
-      - name: Cloud
-        links:
-        - name: Azure
-          url: 'https://portal.azure.com'
-      - name: Dev
-        links:
-        - name: Github
-          url: 'https://github.com/'
-      - name: Media
-        links:
-        - name: YouTube
-          url: 'https://youtube.com/feed/subscriptions'
-        - name: Netflix
-          url: 'https://netflix.com/'
-        - name: Plex@Camelus
-          url: 'https://plex.bloopnet.xac.im'
-        - name: Ombi@Bloopnet
-          url: 'https://ombi.bloopnet.xac.im'
-      - name: Reading
-        links:
-        - name: NYTimes
-          url: 'http://nytimes.com'
-        - name: Reddit
-          url: 'http://reddit.com'
-      - name: Tech
-        links:
-        - name: The Verge
-          url: 'https://theverge.com/'
-        - name: MIT Technology Review
-          url: 'https://www.technologyreview.com/'
+        - name: Communicate
+          links:
+            - name: Discord
+              url: 'https://discord.com'
+            - name: Gmail
+              url: 'http://gmail.com'
+            - name: Slack
+              url: 'https://slack.com/signin'
+        - name: Cloud
+          links:
+            - name: Azure
+              url: 'https://portal.azure.com'
+        - name: Dev
+          links:
+            - name: Github
+              url: 'https://github.com/'
+        - name: Media
+          links:
+            - name: YouTube
+              url: 'https://youtube.com/feed/subscriptions'
+            - name: Netflix
+              url: 'https://netflix.com/'
+            - name: Plex@Camelus
+              url: 'https://plex.bloopnet.xac.im'
+            - name: Ombi@Bloopnet
+              url: 'https://ombi.bloopnet.xac.im'
+        - name: Reading
+          links:
+            - name: NYTimes
+              url: 'http://nytimes.com'
+            - name: Reddit
+              url: 'http://reddit.com'
+        - name: Tech
+          links:
+            - name: The Verge
+              url: 'https://theverge.com/'
+            - name: MIT Technology Review
+              url: 'https://www.technologyreview.com/'
     ingress:
       main:
         enabled: true
+        ingressClassName: "traefik"
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: websecure
           traefik.ingress.kubernetes.io/router.middlewares: traefik-default-middlewares-chain@kubernetescrd
@@ -80,15 +83,19 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: "weather-sunset"
         hosts:
-        - host: "${SECRET_DOMAIN}"
-          paths:
-          - path: /
-            pathType: Prefix
+          - host: "hajimari.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
         tls:
-        - hosts:
-          - "hajimari.${SECRET_DOMAIN}"
+          - hosts:
+              - "hajimari.${SECRET_DOMAIN}"
     persistence:
       data:
         enabled: true
         accessMode: ReadWriteOnce
         size: 1Gi
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128M
