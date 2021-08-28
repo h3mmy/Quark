@@ -5,6 +5,7 @@
 
 - Will not be using k3sup long-term. It misconfigured the cluster for me too many times. I will be shifting to Ansible and Kubespray gradually. Ultimately this is to be a blueprint for the upgrade to Bloopnet, but keeping the scope of this project limited to tie-in point section of the BloopyQuark Project (To interface between the two meshes)
 
+- Should add rancher docs about disabling firewalld on RHEL
 
 Copied from template below this line
 ----
