@@ -11,4 +11,5 @@ resources:
   - longhorn-charts.yaml
   - external-dns-charts.yaml
   - traefik-charts.yaml
+  - stakater-charts.yaml
 
