@@ -4,6 +4,8 @@ kind: HelmRelease
 metadata:
   name: traefik
   namespace: networking
+  annotations:
+    secret.reloader.stakater.com/reload: "cluster-secrets"
 spec:
   interval: 5m
   chart:
@@ -33,7 +35,7 @@ spec:
       type: LoadBalancer
       spec:
         externalIPs:
-          - "${SECRET_DOMAIN}"
+          - "${SECRET_LEPTON_IP}"
         loadBalancerIP: "${SVC_TRAEFIK_LB}"
         externalTrafficPolicy: Local
 
@@ -64,7 +66,7 @@ spec:
     additionalArguments:
       - "--providers.kubernetesingress.ingressendpoint.ip=${SVC_TRAEFIK_LB}"
       - "--providers.kubernetescrd.allowexternalnameservices=true"
-      
+
     ports:
       traefik:
         expose: true
