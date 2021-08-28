@@ -57,7 +57,6 @@ spec:
         enabled: true
 
     globalArguments:
-      - "--api.insecure=true"
       - "--serverstransport.insecureskipverify=true"
       - "--providers.kubernetesingress.ingressclass=traefik"
       - "--metrics.prometheus=true"
