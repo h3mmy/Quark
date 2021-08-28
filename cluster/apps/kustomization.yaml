@@ -6,3 +6,5 @@ resources:
   - system-upgrade
   - auth
   - kube-system
+  - flux-system
+  

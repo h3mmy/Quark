@@ -80,8 +80,6 @@ spec:
     experimental:
       plugins:
         enabled: true
-    nodeSelector:
-      node-role.kubernetes.io/worker: "true"
     resources:
       requests:
         memory: 100Mi
