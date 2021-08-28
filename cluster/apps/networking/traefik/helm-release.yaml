@@ -34,8 +34,6 @@ spec:
       enabled: true
       type: LoadBalancer
       spec:
-        externalIPs:
-          - "${SECRET_LEPTON_IP}"
         loadBalancerIP: "${SVC_TRAEFIK_LB}"
         externalTrafficPolicy: Local
 
