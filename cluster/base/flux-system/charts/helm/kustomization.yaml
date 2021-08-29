@@ -14,3 +14,6 @@ resources:
   - stakater-charts.yaml
   - deliveryhero-charts.yaml
   - weaveworks-kured-charts.yaml
+  - prometheus-community-charts.yaml
+  - node-feature-discovery-charts.yaml
+  - minio-charts.yaml
