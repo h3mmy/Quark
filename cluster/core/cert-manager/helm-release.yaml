@@ -4,8 +4,6 @@ kind: HelmRelease
 metadata:
   name: cert-manager
   namespace: cert-manager
-  annotations:
-    - secret.reloader.stakater.com/reload: "cloudflare-token-secret"
 spec:
   interval: 5m
   chart:
