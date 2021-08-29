@@ -91,8 +91,7 @@ spec:
     persistence:
       data:
         enabled: true
-        accessMode: ReadWriteOnce
-        size: 1Gi
+        existingClaim: hajimari-config
     resources:
       requests:
         cpu: 100m
