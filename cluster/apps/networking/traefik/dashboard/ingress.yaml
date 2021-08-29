@@ -9,6 +9,7 @@ metadata:
     hajimari.io/enable: "true"
     hajimari.io/icon: "web"
     hajimari.io/appName: "traefik"
+    secret.reloader.stakater.com/reload: "auto"
 spec:
   tls:
     - hosts:

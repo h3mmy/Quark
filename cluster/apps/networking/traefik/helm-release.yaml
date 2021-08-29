@@ -4,8 +4,6 @@ kind: HelmRelease
 metadata:
   name: traefik
   namespace: networking
-  annotations:
-    secret.reloader.stakater.com/reload: "cluster-secrets"
 spec:
   interval: 5m
   chart:
