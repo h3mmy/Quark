@@ -52,7 +52,7 @@ spec:
 
     ingressRoute:
       dashboard:
-        enabled: true
+        enabled: false
 
     globalArguments:
       - "--serverstransport.insecureskipverify=true"
