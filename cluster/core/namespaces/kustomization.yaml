@@ -7,5 +7,4 @@ resources:
   - auth.yaml
   - longhorn-system.yaml
   - kube-system.yaml
-  - utility-system.yaml
 
