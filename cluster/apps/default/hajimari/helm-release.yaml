@@ -77,18 +77,18 @@ spec:
         enabled: true
         ingressClassName: "traefik"
         annotations:
-          secret.reloader.stakater.com/reload: "auto"
+          # secret.reloader.stakater.com/reload: "auto"
           traefik.ingress.kubernetes.io/router.entrypoints: websecure
           hajimari.io/enable: "true"
           hajimari.io/icon: "weather-sunset"
         hosts:
-          - host: "hajimari.${SECRET_DOMAIN}"
+          - host: "${SECRET_DOMAIN}"
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - hosts:
-              - "hajimari.${SECRET_DOMAIN}"
+              - "${SECRET_DOMAIN}"
     persistence:
       data:
         enabled: true
