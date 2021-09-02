@@ -6,7 +6,7 @@
 - Will not be using k3sup long-term. It misconfigured the cluster for me too many times. I will be shifting to Ansible and Kubespray gradually. Ultimately this is to be a blueprint for the upgrade to Bloopnet, but keeping the scope of this project limited to tie-in point section of the BloopyQuark Project (To interface between the two meshes)
 
 
-Copied from template below this line
+Copied from template (outdated) below this line
 ----
 Template for deploying a single [k3s](https://k3s.io/) cluster with [k3sup](https://github.com/alexellis/k3sup) backed by [Flux](https://toolkit.fluxcd.io/) and [SOPS](https://toolkit.fluxcd.io/guides/mozilla-sops/).
 
