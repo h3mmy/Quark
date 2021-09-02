@@ -6,5 +6,5 @@ metadata:
   namespace: flux-system
 data:
   METALLB_LB_RANGE: 10.0.0.0/16
-  SVC_TRAEFIK_LB: 10.0.0.197
+  SVC_TRAEFIK_LB: 132.226.38.128
   TZ: America/Detroit
