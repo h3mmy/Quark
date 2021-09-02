@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
   - default
   - networking
-  - system-upgrade
   - auth
   - kube-system
   - flux-system
