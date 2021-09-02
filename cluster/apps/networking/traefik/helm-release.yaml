@@ -20,9 +20,6 @@ spec:
     - name: cert-manager
       namespace: cert-manager
   values:
-    image:
-      name: ghcr.io/k8s-at-home/traefik
-      pullPolicy: IfNotPresent
 
     deployment:
       kind: Deployment
@@ -62,8 +59,6 @@ spec:
     globalArguments:
       - "--serverstransport.insecureskipverify=true"
       - "--providers.kubernetesingress.ingressclass=traefik"
-      - "--metrics.prometheus=true"
-      - "--metrics.prometheus.entryPoint=metrics"
 
     additionalArguments:
       - "--providers.kubernetesingress.ingressendpoint.ip=${SVC_TRAEFIK_LB}"
