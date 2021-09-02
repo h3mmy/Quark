@@ -54,9 +54,10 @@ spec:
 
     ingressRoute:
       dashboard:
-        enabled: true
+        enabled: false
 
     globalArguments:
+      - "--api.dashboard=true"
       - "--serverstransport.insecureskipverify=true"
       - "--providers.kubernetesingress.ingressclass=traefik"
 
