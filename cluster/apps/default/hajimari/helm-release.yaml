@@ -39,14 +39,14 @@ spec:
           url: ${BLOOPNET_URI}
           icon: test-tube
         - name: Plex@Camelus
-          url: plex.${BLOOPNET_URI}
+          url: "https://plex.${BLOOPNET_URI}"
           icon: television-play
         - name: Ombi@Camelus
-          url: ombi.${BLOOPNET_URI}
+          url: "https://ombi.${BLOOPNET_URI}"
           icon: tray-plus
         - name: Heimdall
-          url: heimdall.${BLOOPNET_URI}
-          icon: bx-book-bookmark
+          url: "https://heimdall.${BLOOPNET_URI}"
+          icon: book-bookmark
       groups:
         - name: Communicate
           links:
@@ -99,6 +99,8 @@ spec:
         tls:
           - hosts:
               - "${SECRET_DOMAIN}"
+    podSecurityContext:
+      fsGroup: RunAsAny
     persistence:
       data:
         enabled: true
