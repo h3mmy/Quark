@@ -100,7 +100,7 @@ spec:
           - hosts:
               - "${SECRET_DOMAIN}"
     podSecurityContext:
-      fsGroup: RunAsAny
+      fsGroup: 101
     persistence:
       data:
         enabled: true
