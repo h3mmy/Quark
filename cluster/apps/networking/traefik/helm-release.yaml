@@ -37,6 +37,8 @@ spec:
       type: LoadBalancer
       spec:
         loadBalancerIP: "${SVC_TRAEFIK_LB}"
+        externalIPs:
+          - "${SVC_TRAEFIK_LB}"
         externalTrafficPolicy: Local
 
     annotations:
