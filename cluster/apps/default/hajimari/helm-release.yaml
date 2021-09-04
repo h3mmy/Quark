@@ -46,6 +46,9 @@ spec:
         - name: Ombi@Camelus
           url: ombi.${BLOOPNET_URI}
           icon: tray-plus
+        - name: Heimdall
+          url: heimdall.${BLOOPNET_URI}
+          icon: bx-book-bookmark
       groups:
         - name: Communicate
           links:
