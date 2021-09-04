@@ -28,7 +28,7 @@ spec:
       repository: ghcr.io/toboshii/hajimari
       tag: v0.1.0
     env:
-      TZ: "America/New_York"
+      TZ: "${TZ}"
     hajimari:
       defaultEnable: false
       namespaceSelector:
@@ -40,6 +40,12 @@ spec:
         - name: BloopNet
           url: ${BLOOPNET_URI}
           icon: test-tube
+        - name: Plex@Camelus
+          url: plex.${BLOOPNET_URI}
+          icon: television-play
+        - name: Ombi@Camelus
+          url: ombi.${BLOOPNET_URI}
+          icon: tray-plus
       groups:
         - name: Communicate
           links:
@@ -63,10 +69,6 @@ spec:
               url: 'https://youtube.com/feed/subscriptions'
             - name: Netflix
               url: 'https://netflix.com/'
-            - name: Plex@Camelus
-              url: 'https://plex.bloopnet.xac.im'
-            - name: Ombi@Bloopnet
-              url: 'https://ombi.bloopnet.xac.im'
         - name: Reading
           links:
             - name: NYTimes
@@ -84,7 +86,7 @@ spec:
         enabled: true
         ingressClassName: "traefik"
         annotations:
-          # secret.reloader.stakater.com/reload: "auto"
+          secret.reloader.stakater.com/reload: "auto"
           traefik.ingress.kubernetes.io/router.entrypoints: websecure
           hajimari.io/enable: "true"
           hajimari.io/icon: "weather-sunset"
