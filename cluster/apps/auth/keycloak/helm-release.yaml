@@ -23,6 +23,8 @@ spec:
     # args: ["--platform=linux/amd64"]
     env:
       TZ: "${TZ}"
+    postgresql:
+      enabled: false
     ingress:
       main:
         enabled: true
