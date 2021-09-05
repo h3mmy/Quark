@@ -46,7 +46,7 @@ spec:
           icon: tray-plus
         - name: Heimdall
           url: "https://heimdall.${BLOOPNET_URI}"
-          icon: book
+          icon: book-outline
       groups:
         - name: Communicate
           links:
