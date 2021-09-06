@@ -37,6 +37,8 @@ spec:
       postgresqlDatabase: ${KEYCLOAK_POSTGRES_DB}
       networkPolicy:
         enabled: false
+      securityContext:
+        fsGroup: 1000
       persistence:
         enabled: true
         existingClaim: pvc-postgres
