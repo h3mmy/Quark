@@ -20,7 +20,6 @@ spec:
     image:
       repository: docker.io/jboss/keycloak
       tag: latest
-    # args: ["--platform=linux/amd64"]
     env:
       TZ: "${TZ}"
     
@@ -38,7 +37,11 @@ spec:
       networkPolicy:
         enabled: false
       securityContext:
-        fsGroup: 1000
+        enabled: true
+        fsGroup: 1001
+      containerSecurityContext:
+        enabled: true
+        runAsUser: 1001
       persistence:
         enabled: true
         existingClaim: pvc-postgres
