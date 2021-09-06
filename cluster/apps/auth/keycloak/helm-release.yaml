@@ -42,6 +42,10 @@ spec:
       containerSecurityContext:
         enabled: true
         runAsUser: 1001
+      psp:
+        create: true
+      rbac:
+        create: true
       persistence:
         enabled: true
         existingClaim: pvc-postgres
