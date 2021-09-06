@@ -23,8 +23,28 @@ spec:
     # args: ["--platform=linux/amd64"]
     env:
       TZ: "${TZ}"
+    
+    podSecurityContext:
+      fsGroup: 1000
+    
+    autoscaling:
+      enabled: true
+
     postgresql:
-      enabled: false
+      enabled: true
+      postgresqlUsername: ${KEYCLOAK_POSTGRES_USER}
+      postgresqlPassword: ${KEYCLOAK_POSTGRES_PASSWORD}
+      postgresqlDatabase: ${KEYCLOAK_POSTGRES_DB}
+      networkPolicy:
+        enabled: false
+      persistence:
+        enabled: true
+        existingClaim: pvc-postgres
+    
+    extraEnv: |
+      - name: PROXY_ADDRESS_FORWARDING
+        value: "true"
+
     ingress:
       main:
         enabled: true
