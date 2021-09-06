@@ -49,6 +49,8 @@ spec:
       persistence:
         enabled: true
         existingClaim: pvc-postgres
+      volumePermissions:
+        enabled: true
       affinity: 
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
