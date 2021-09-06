@@ -43,7 +43,7 @@ spec:
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
+            labelSelectorTerms:
             - matchExpressions:
               - key: kubernetes.io/arch
                 operator: In
@@ -57,6 +57,19 @@ spec:
       - name: PROXY_ADDRESS_FORWARDING
         value: "true"
 
+    affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 1
+              preference:
+                - matchExpressions:
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                    - amd64
+                    - i386
+                    - i686
+                    - x86
     ingress:
       main:
         enabled: true
