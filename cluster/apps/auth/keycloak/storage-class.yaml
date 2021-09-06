@@ -4,4 +4,4 @@ metadata:
   name: oci-fss
 provisioner: oracle.com/oci-fss
 parameters:
-  mntTargetId: ${MOUNT_TARGET_ID}
+  mntTargetId: "${MOUNT_TARGET_ID}"
