@@ -60,6 +60,8 @@ spec:
           links:
             - name: Azure
               url: 'https://portal.azure.com'
+            - name: Oracle
+              url: 'https://console.us-ashburn-1.oraclecloud.com'
         - name: Dev
           links:
             - name: Github
