@@ -5,7 +5,7 @@ metadata:
   name: postgres-pvc
   namespace: auth
 spec:
-  storageClassName: oci-bv
+  storageClassName: oci
   accessModes:
     - ReadWriteMany
   resources:
