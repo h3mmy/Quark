@@ -22,6 +22,8 @@ spec:
       tag: latest
     env:
       TZ: "${TZ}"
+      KEYCLOAK_USER: ${KEYCLOAK_USER}
+      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
     
     podSecurityContext:
       fsGroup: 1000
