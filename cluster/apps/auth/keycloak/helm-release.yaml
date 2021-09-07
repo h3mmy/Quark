@@ -28,6 +28,7 @@ spec:
     
     autoscaling:
       enabled: true
+      minReplicas: 1
 
     postgresql:
       enabled: true
@@ -82,24 +83,23 @@ spec:
                     - i686
                     - x86
     ingress:
-      main:
-        enabled: true
-        ingressClassName: "traefik"
-        annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          traefik.ingress.kubernetes.io/router.middlewares: "networking-basic-auth@kubernetescrd"
-          traefik.ingress.kubernetes.io/router.tls.options: "traefik-secure-tlsoptions@kubernetescrd"
-          hajimari.io/enable: "true"
-          hajimari.io/icon: "key-wireless"
-          hajimari.io/appName: "keycloak"
-        hosts:
-          - host: "auth.${SECRET_DOMAIN}"
-            paths:
-              - path: /
-                pathType: Prefix
-        tls:
-          - hosts:
-            - "auth.${SECRET_DOMAIN}"
+      enabled: true
+      ingressClassName: "traefik"
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        traefik.ingress.kubernetes.io/router.middlewares: "networking-basic-auth@kubernetescrd"
+        traefik.ingress.kubernetes.io/router.tls.options: "traefik-secure-tlsoptions@kubernetescrd"
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "key-wireless"
+        hajimari.io/appName: "keycloak"
+      hosts:
+        - host: "auth.${SECRET_DOMAIN}"
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - hosts:
+          - "auth.${SECRET_DOMAIN}"
     
   
         
