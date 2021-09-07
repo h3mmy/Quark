@@ -22,8 +22,6 @@ spec:
       tag: latest
     env:
       TZ: "${TZ}"
-      KEYCLOAK_USER: ${KEYCLOAK_USER}
-      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
     
     podSecurityContext:
       fsGroup: 1000
@@ -70,6 +68,10 @@ spec:
     extraEnv: |
       - name: PROXY_ADDRESS_FORWARDING
         value: "true"
+      - name: KEYCLOAK_USER
+        value: ${KEYCLOAK_USER}
+      - name: KEYCLOAK_PASSWORD
+        value: ${KEYCLOAK_PASSWORD}
 
     affinity: |
       nodeAffinity:
