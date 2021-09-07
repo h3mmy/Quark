@@ -94,7 +94,7 @@ spec:
         hajimari.io/enable: "true"
         hajimari.io/icon: "key-wireless"
         hajimari.io/appName: "keycloak"
-      hosts:
+      rules:
         - host: "auth.${SECRET_DOMAIN}"
           paths:
             - path: /
