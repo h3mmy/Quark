@@ -1,8 +1,5 @@
 # Kubernetes Cluster with GitOps
 
-![Tag](https://img.shields.io/github/v/tag/h3mmy/quark?style=for-the-badge)
-[![k3s](https://img.shields.io/badge/k3s-v1.21.2-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
-
 - Will not be using k3sup long-term. It misconfigured the cluster for me too many times. I will be shifting to Ansible and Kubespray gradually. Ultimately this is to be a blueprint for the upgrade to Bloopnet, but keeping the scope of this project limited to tie-in point section of the BloopyQuark Project (To interface between the two meshes)
 - Update(09/02/2021) This project is actually using k8s instead of k3s. I will fork off a k3s version.
 
