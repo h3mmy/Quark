@@ -11,5 +11,3 @@ spec:
     authResponseHeaders:
       - X-Auth-User
       - X-Secret
-    tls:
-      certSecret: "${SECRET_DOMAIN/./-}-tls"
