@@ -1,0 +1,47 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik-forward-auth
+  namespace: networking
+spec:
+  interval: 5m
+  chart:
+    spec:
+      # renovate: registryUrl=https://k8s-at-home.com/charts/
+      chart: traefik-forward-auth
+      version: 1.0.10
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-at-home-charts
+        namespace: flux-system
+      interval: 10m
+  values:
+    authHost: "${AUTH_SERVER}"
+    cookie:
+      domain: "${SECRET_DOMAIN}"
+    default:
+      provider: "oidc"
+    providers:
+      oidc:
+        enabled: true
+        issuerUrl: "${AUTH_ISSUER}"
+        clientId: "${AUTH_CLIENT_ID}"
+        clientSecret: ${AUTH_CLIENT_SECRET}
+
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-production
+        traefik.ingress.kubernetes.io/router.middlewares: traefik-forward-auth@kubernetescrd
+      hosts:
+        - host: "auth.${SECRET_DOMAIN}"
+          paths:
+            - /
+      tls:
+        - secretName: "${SECRET_DOMAIN/./-}-tls"
+          hosts:
+            - "auth.${SECRET_DOMAIN}"
+    middleware:
+      enabled: true
+      name: bloopy-auth

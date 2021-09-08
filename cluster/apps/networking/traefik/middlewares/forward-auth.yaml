@@ -11,3 +11,6 @@ spec:
     authResponseHeaders:
       - X-Auth-User
       - X-Secret
+    authRequestHeaders:
+      - "Accept"
+      - "X-CustomHeader"

@@ -7,5 +7,5 @@ resources:
   - secret.sops.yaml
   - basic-auth.yaml
   - rate-limit.yaml
-  - forward-auth.yaml
+  # - forward-auth.yaml
   
