@@ -33,7 +33,6 @@ spec:
       enabled: true
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-production
-        traefik.ingress.kubernetes.io/router.middlewares: traefik-forward-auth@kubernetescrd
       hosts:
         - host: "auth.${SECRET_DOMAIN}"
           paths:
