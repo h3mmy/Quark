@@ -27,7 +27,8 @@ spec:
       tag: 3.10.2
     env:
       TZ: "${TZ}"
-
+    persistence:
+      enabled: false
     ingress:
       main:
         enabled: true
