@@ -41,8 +41,7 @@ spec:
       hosts:
         - host: "ide.${SECRET_DOMAIN}"
           paths:
-            - path: /
-              pathType: Prefix
+            - /
       tls:
         - hosts:
             - "ide.${SECRET_DOMAIN}"
