@@ -30,23 +30,22 @@ spec:
     persistence:
       enabled: false
     ingress:
-      main:
-        enabled: true
-        ingressClassName: "traefik"
-        annotations:
-          secret.reloader.stakater.com/reload: "auto"
-          traefik.ingress.kubernetes.io/router.entrypoints: websecure
-          hajimari.io/enable: "true"
-          hajimari.io/appName: "Code Server"
-          hajimari.io/icon: "vs-code"
-        hosts:
-          - host: "$ide.{SECRET_DOMAIN}"
-            paths:
-              - path: /
-                pathType: Prefix
-        tls:
-          - hosts:
-              - "$ide.{SECRET_DOMAIN}"
+      enabled: true
+      ingressClassName: "traefik"
+      annotations:
+        secret.reloader.stakater.com/reload: "auto"
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        hajimari.io/enable: "true"
+        hajimari.io/appName: "Code Server"
+        hajimari.io/icon: "vs-code"
+      hosts:
+        - host: "$ide.{SECRET_DOMAIN}"
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - hosts:
+            - "$ide.{SECRET_DOMAIN}"
     podSecurityContext:
       fsGroup: 101
     resources:
