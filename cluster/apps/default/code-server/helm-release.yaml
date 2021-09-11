@@ -24,9 +24,12 @@ spec:
   values:
     image:
       repository: codercom/code-server
-      tag: 3.10.2
-    env:
-      TZ: "${TZ}"
+      tag: 3.11.1
+    extraVars:
+      - name: TZ 
+        value: ${TZ}
+      - name: PASSWORD
+        value: ${CODE_SERVER_PASSWORD}
     persistence:
       enabled: false
     ingress:
