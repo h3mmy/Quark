@@ -39,13 +39,13 @@ spec:
         hajimari.io/appName: "Code Server"
         hajimari.io/icon: "vs-code"
       hosts:
-        - host: "$ide.${SECRET_DOMAIN}"
+        - host: "ide.${SECRET_DOMAIN}"
           paths:
             - path: /
               pathType: Prefix
       tls:
         - hosts:
-            - "$ide.${SECRET_DOMAIN}"
+            - "ide.${SECRET_DOMAIN}"
     podSecurityContext:
       fsGroup: 101
     resources:
