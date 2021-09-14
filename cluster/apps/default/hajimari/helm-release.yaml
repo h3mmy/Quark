@@ -33,6 +33,7 @@ spec:
         matchNames:
           - default
           - networking
+          - auth
       name: "Visitor"
       customApps:
         - name: BloopNet
