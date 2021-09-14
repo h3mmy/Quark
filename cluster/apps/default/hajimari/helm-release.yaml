@@ -93,9 +93,6 @@ spec:
           secret.reloader.stakater.com/reload: "auto"
           traefik.ingress.kubernetes.io/router.entrypoints: websecure
           # traefik.ingress.kubernetes.io/router.middlewares: "networking-bloopy-auth@kubernetescrd"
-          hajimari.io/enable: "true"
-          hajimari.io/appName: Dashboard
-          hajimari.io/icon: "weather-sunset"
         hosts:
           - host: "${SECRET_DOMAIN}"
             paths:
