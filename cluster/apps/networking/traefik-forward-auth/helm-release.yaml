@@ -20,7 +20,7 @@ spec:
   values:
     traefikForwardAuth:
       clientId: "${AUTH_CLIENT_ID}"
-      clientSecret: ${AUTH_CLIENT_SECRET}
+      clientSecret: "${AUTH_CLIENT_SECRET}"
       authHost: "${AUTH_SERVER}"
       domain: "${SECRET_DOMAIN}"
       oidcUri: "${AUTH_ISSUER}"
