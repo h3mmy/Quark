@@ -19,9 +19,12 @@ spec:
 
   values:
     traefikForwardAuth:
+      enabled: true
       clientId: "${AUTH_CLIENT_ID}"
       clientSecret:
-        value: "${AUTH_CLIENT_SECRET}"
+        valueFrom:
+          secretRef:
+            name: traefik-forward-auth-client-secret
       authHost: "${AUTH_SERVER}"
       domain: "${SECRET_DOMAIN}"
       oidcUri: "${AUTH_ISSUER}"
