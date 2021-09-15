@@ -19,6 +19,7 @@ spec:
 
   values:
     traefikForwardAuth:
+      # Custom spec by mesosphere
       enabled: true
       clientId: "${AUTH_CLIENT_ID}"
       clientSecret:
