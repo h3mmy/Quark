@@ -29,16 +29,6 @@ spec:
       domain: "${SECRET_DOMAIN}"
       oidcUri: "${AUTH_ISSUER}"
           
-    ingress:
-      enabled: true
-      hosts:
-        - host: "auth.${SECRET_DOMAIN}"
-          paths:
-            - /
-      tls:
-        - secretName: "${SECRET_DOMAIN/./-}-tls"
-          hosts:
-            - "auth.${SECRET_DOMAIN}"
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
@@ -51,6 +41,3 @@ spec:
                     - i386
                     - i686
                     - x86
-    middleware:
-      enabled: true
-      name: bloopy-auth
