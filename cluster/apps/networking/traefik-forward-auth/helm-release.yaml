@@ -36,6 +36,18 @@ spec:
         - secretName: "${SECRET_DOMAIN/./-}-tls"
           hosts:
             - "auth.${SECRET_DOMAIN}"
+    affinity:
+      nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                - matchExpressions:
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+                      - i386
+                      - i686
+                      - x86
     middleware:
       enabled: true
       name: bloopy-auth
