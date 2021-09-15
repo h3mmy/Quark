@@ -39,15 +39,15 @@ spec:
     affinity:
       nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
+            - nodeSelectorTerms:
                 - matchExpressions:
-                  - key: kubernetes.io/arch
-                    operator: In
-                    values:
-                      - amd64
-                      - i386
-                      - i686
-                      - x86
+                    - key: kubernetes.io/arch
+                      operator: In
+                      values:
+                        - amd64
+                        - i386
+                        - i686
+                        - x86
     middleware:
       enabled: true
       name: bloopy-auth
