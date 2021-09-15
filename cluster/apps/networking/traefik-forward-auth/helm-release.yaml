@@ -21,9 +21,7 @@ spec:
     traefikForwardAuth:
       clientId: "${AUTH_CLIENT_ID}"
       clientSecret:
-        valueFrom:
-          secretKeyRef: cluster-secrets
-          key: AUTH_CLIENT_SECRET
+        value: "${AUTH_CLIENT_SECRET}"
       authHost: "${AUTH_SERVER}"
       domain: "${SECRET_DOMAIN}"
       oidcUri: "${AUTH_ISSUER}"
