@@ -29,7 +29,10 @@ spec:
       authHost: "${AUTH_SERVER}"
       domain: "${SECRET_DOMAIN}"
       oidcUri: "${AUTH_ISSUER}"
-          
+    
+    ingress:
+      enabled: true
+
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
