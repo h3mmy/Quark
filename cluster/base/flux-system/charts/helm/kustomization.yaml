@@ -18,4 +18,5 @@ resources:
   - node-feature-discovery-charts.yaml
   - minio-charts.yaml
   - cdr-charts.yaml
-  - mesosphere-staging-charts.yaml
+  # - mesosphere-staging-charts.yaml
+  - oauth2-proxy-charts.yaml
