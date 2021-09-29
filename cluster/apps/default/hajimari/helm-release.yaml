@@ -63,10 +63,14 @@ spec:
               url: 'https://portal.azure.com'
             - name: Oracle
               url: 'https://console.us-ashburn-1.oraclecloud.com'
+            - name: Google Cloud
+              url: 'https://console.cloud.google.com/'
         - name: Dev
           links:
             - name: Github
-              url: 'https://github.com/'
+              url: 'https://github.com/h3mmy'
+            - name: Gitlab
+              url: 'https://gitlab.com/h3mmy'
         - name: Media
           links:
             - name: YouTube
