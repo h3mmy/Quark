@@ -1,0 +1,41 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: jupyterhub
+  namespace: default
+spec:
+  interval: 5m
+  chart:
+    spec:
+      # renovate: registryUrl=https://jupyterhub.github.io/helm-chart/
+      chart: jupyterhub
+      version: 1.1.3
+      sourceRef:
+        kind: HelmRepository
+        name: jupyterhub-charts
+        namespace: flux-system
+      interval: 5m
+  values:
+    image:
+      repository: "jupyterhub/k8s-hub"
+      tag: "1.0.0"
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: "traefik"
+      path: /jhub
+      hosts:
+      - "${SECRET_DOMAIN}"
+      tls:
+      - hosts:
+        - "${SECRET_DOMAIN}"
+    singleuser:
+      storage:
+        extraVolumes:
+          - name: jupyterhub-shared
+            persistentVolumeClaim:
+              claimName: pvc-jupyterhub
+        extraVolumeMounts:
+          - name: jupyterhub-shared
+            mountPath: /home/shared

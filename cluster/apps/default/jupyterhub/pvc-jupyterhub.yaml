@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: pvc-jupyterhub
+spec:
+ storageClassName: oci-fss
+ accessModes:
+   - ReadWriteMany
+ resources:
+  requests:
+    storage: 2Gi
+ volumeName: jupyterhub-shared
