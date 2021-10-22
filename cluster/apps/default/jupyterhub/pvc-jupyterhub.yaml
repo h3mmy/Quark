@@ -3,6 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
  name: pvc-jupyterhub
  namespace: default
+ labels:
+  createdFor: jupyter
 spec:
  storageClassName: oci-fss
  accessModes:
