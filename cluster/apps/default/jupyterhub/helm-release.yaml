@@ -20,11 +20,14 @@ spec:
     hub:
       db:
         pvc:
-          storageClassName: oci-fss
+          selector: pv-jupyterhub
     ingress:
       enabled: true
       annotations:
         kubernetes.io/ingress.class: "traefik"
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "key-wireless"
+        hajimari.io/appName: "keycloak"
       hosts:
       - "jhub.${SECRET_DOMAIN}"
       tls:
@@ -32,10 +35,5 @@ spec:
         - "jhub.${SECRET_DOMAIN}"
     singleuser:
       storage:
-        extraVolumes:
-          - name: jupyterhub-shared
-            persistentVolumeClaim:
-              claimName: pvc-jupyterhub
-        extraVolumeMounts:
-          - name: jupyterhub-shared
-            mountPath: /home/shared
+        static:
+          pvcName: pvc-jupyterhub
