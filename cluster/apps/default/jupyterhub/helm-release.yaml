@@ -26,8 +26,8 @@ spec:
       annotations:
         kubernetes.io/ingress.class: "traefik"
         hajimari.io/enable: "true"
-        hajimari.io/icon: "key-wireless"
-        hajimari.io/appName: "keycloak"
+        hajimari.io/icon: "chart-scatter-plot"
+        hajimari.io/appName: "jupyterhub"
       hosts:
       - "jhub.${SECRET_DOMAIN}"
       tls:
