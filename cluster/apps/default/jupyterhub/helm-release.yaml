@@ -24,12 +24,11 @@ spec:
       enabled: true
       annotations:
         kubernetes.io/ingress.class: "traefik"
-      path: /jhub
       hosts:
-      - "${SECRET_DOMAIN}"
+      - "jhub.${SECRET_DOMAIN}"
       tls:
       - hosts:
-        - "${SECRET_DOMAIN}"
+        - "jhub.${SECRET_DOMAIN}"
     singleuser:
       storage:
         extraVolumes:
