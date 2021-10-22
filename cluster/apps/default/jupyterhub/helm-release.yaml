@@ -20,7 +20,9 @@ spec:
     hub:
       db:
         pvc:
-          selector: pv-jupyterhub
+          selector: 
+            matchLabels:
+              createdFor: jupyter
     ingress:
       enabled: true
       annotations:

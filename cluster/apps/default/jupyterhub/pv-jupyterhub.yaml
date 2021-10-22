@@ -3,6 +3,8 @@ kind: PersistentVolume
 metadata:
  name: clara
  namespace: default
+ labels:
+  createdFor: jupyter
 spec:
  storageClassName: oci-fss
  capacity:
