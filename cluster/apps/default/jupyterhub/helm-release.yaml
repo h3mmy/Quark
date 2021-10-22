@@ -17,6 +17,10 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    hub:
+      db:
+        pvc:
+          storageClassName: oci-fss
     ingress:
       enabled: true
       annotations:
