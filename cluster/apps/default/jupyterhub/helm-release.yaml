@@ -19,8 +19,7 @@ spec:
   values:
     hub:
       db:
-        pvc:
-          type: sqlite-memory
+        type: sqlite-memory
     ingress:
       enabled: true
       annotations:
