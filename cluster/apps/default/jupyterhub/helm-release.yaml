@@ -20,6 +20,7 @@ spec:
     hub:
       db:
         pvc:
+          storageClass: oci-fss
           selector: 
             matchLabels:
               createdFor: jupyter
