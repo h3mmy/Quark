@@ -49,7 +49,7 @@ spec:
           pvcName: pvc-jupyterhub
       # Defines the default image
       image:
-        name: jupyter/datascience-notebook
+        name: jupyter/scipy-notebook
         tag: latest
       profileList:
         - display_name: "Minimal environment"
