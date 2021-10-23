@@ -19,7 +19,8 @@ spec:
   values:
     hub:
       db:
-        type: sqlite-memory
+        type: postgres
+        url: "${JHUB_DB_URL}"
     ingress:
       enabled: true
       annotations:
