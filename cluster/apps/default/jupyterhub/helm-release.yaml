@@ -22,6 +22,9 @@ spec:
         type: postgres
         url: "${JHUB_DB_URL}"
       config:
+        Authenticator:
+          admin_users:
+            - ${JHUB_ADMIN}
         GitHubOAuthenticator:
           client_id: ${GITHUB_AUTH_CLIENT_ID}
           client_secret: ${GITHUB_AUTH_CLIENT_SECRET}
