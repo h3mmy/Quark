@@ -63,15 +63,4 @@ spec:
           description: "The Jupyter Stacks spark image!"
           kubespawner_override:
             image: jupyter/all-spark-notebook:latest
-        - display_name: "Learning Data Science"
-          description: "Datascience Environment with Sample Notebooks"
-          kubespawner_override:
-            image: jupyter/datascience-notebook:latest
-            lifecycle_hooks:
-              postStart:
-                exec:
-                  command:
-                    - "sh"
-                    - "-c"
-                    - >
-                      gitpuller https://github.com/data-8/materials-fa17 master materials-fa;
+        
