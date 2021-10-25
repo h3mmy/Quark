@@ -8,7 +8,7 @@ metadata:
 spec:
  storageClassName: oci-fss
  capacity:
-  storage: 2Gi
+  storage: 4Gi
  accessModes:
   - ReadWriteMany
  mountOptions:

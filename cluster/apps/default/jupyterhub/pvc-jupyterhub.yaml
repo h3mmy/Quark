@@ -11,5 +11,5 @@ spec:
    - ReadWriteMany
  resources:
   requests:
-    storage: 2Gi
+    storage: 3Gi
  volumeName: clara

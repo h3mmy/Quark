@@ -45,6 +45,7 @@ spec:
         - "jhub.${SECRET_DOMAIN}"
     singleuser:
       storage:
+        capacity: 1Gi
         static:
           pvcName: pvc-jupyterhub
       # Defines the default image
