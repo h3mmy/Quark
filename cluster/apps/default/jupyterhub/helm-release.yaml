@@ -25,12 +25,15 @@ spec:
         Authenticator:
           admin_users:
             - ${JHUB_ADMIN}
-        GitHubOAuthenticator:
-          client_id: ${GITHUB_AUTH_CLIENT_ID}
-          client_secret: ${GITHUB_AUTH_CLIENT_SECRET}
-          oauth_callback_url: ${GITHUB_OAUTH_CALLBACK}
+        GoogleOAuthenticator:
+          client_id: ${GOOGLE_JHUB_CLIENT_ID}
+          client_secret: ${GOOGLE_JHUB_CLIENT_SECRET}
+          oauth_callback_url: ${JHUB_OAUTH_CALLBACK}
+          hosted_domain:
+            - "jhub.${SECRET_DOMAIN}"
+          login_service: ${SECRET_DOMAIN}
         JupyterHub:
-          authenticator_class: github
+          authenticator_class: google
     ingress:
       enabled: true
       annotations:
