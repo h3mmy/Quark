@@ -25,6 +25,7 @@ spec:
         Authenticator:
           admin_users:
             - ${JHUB_ADMIN}
+            - ${JHUB_ADMIN2}
         GoogleOAuthenticator:
           client_id: ${GOOGLE_JHUB_CLIENT_ID}
           client_secret: ${GOOGLE_JHUB_CLIENT_SECRET}
