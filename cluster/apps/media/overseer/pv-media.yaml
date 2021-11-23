@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: clarice
+ namespace: media
+spec:
+ storageClassName: oci-fss
+ capacity:
+  storage: 1Gi
+ accessModes:
+  - ReadWriteMany
+ mountOptions:
+  - nosuid
+ nfs:
+  server: ${CLARICE_IP}
+  path: "${CLARICE_PATH}"
+  readOnly: false

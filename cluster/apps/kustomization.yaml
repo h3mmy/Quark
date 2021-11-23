@@ -6,4 +6,4 @@ resources:
   # - auth
   - kube-system
   - flux-system
-  
+  - media

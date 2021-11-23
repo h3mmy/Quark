@@ -4,6 +4,5 @@ resources:
   - cert-manager.yaml
   - metallb-system.yaml
   - networking.yaml
-  - auth.yaml
+  - media.yaml
   - kube-system.yaml
-
