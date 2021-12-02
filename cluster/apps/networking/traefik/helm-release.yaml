@@ -45,7 +45,7 @@ spec:
       "bloop-env": "test"
       service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
       service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
-      service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "100"
+      service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "10"
       service.beta.kubernetes.io/oci-load-balancer-ssl-ports: "443"
       service.beta.kubernetes.io/oci-load-balancer-tls-secret: "${SECRET_DOMAIN/./-}-tls"
 
