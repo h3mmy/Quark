@@ -4,8 +4,7 @@ resources:
   - cloudflare.yaml
   - rfc1918.yaml
   - redirect-path.yaml
-  - secret.sops.yaml
+  # - secret.sops.yaml
   - basic-auth.yaml
   - rate-limit.yaml
   # - forward-auth.yaml
-  
