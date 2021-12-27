@@ -22,10 +22,10 @@ spec:
       tag: latest
     env:
       TZ: "${TZ}"
-    
+
     podSecurityContext:
       fsGroup: 1000
-    
+
     autoscaling:
       enabled: true
       minReplicas: 1
@@ -52,7 +52,7 @@ spec:
         existingClaim: pvc-postgres
       volumePermissions:
         enabled: true
-      affinity: 
+      affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
             - labelSelector:
@@ -64,7 +64,7 @@ spec:
                       - i386
                       - i686
                       - x86
-    
+
     extraEnv: |
       - name: PROXY_ADDRESS_FORWARDING
         value: "true"
@@ -102,6 +102,5 @@ spec:
       tls:
         - hosts:
           - "auth.${SECRET_DOMAIN}"
-    
-  
-        
+
+
