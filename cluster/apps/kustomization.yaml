@@ -5,5 +5,5 @@ resources:
   - networking
   # - auth
   - kube-system
-  - flux-system
+  # - flux-system
   # - media
