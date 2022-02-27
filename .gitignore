@@ -4,6 +4,7 @@
 .DS_Store
 Thumbs.db
 # k8s
+.config
 kubeconfig
 # vscode-sops
 .decrypted~*.yaml
