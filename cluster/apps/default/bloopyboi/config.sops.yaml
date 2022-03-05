@@ -4,18 +4,19 @@ kind: Secret
 metadata:
     name: config-bloopyboii
     namespace: default
-stringData: ENC[AES256_GCM,data:8y7upw+BJeSxeWnNi6nIqhYLYq+srm1dhYU03CFY/Zufp1RtSkfag0SMV0hdv8VNkgThN1d/X1zyhplFB2cJIHIQDWeCsGC0V1PaCjo7ZitYDQhxS1sfwlMeuOovE8tUdnjmlTmQNqGMW4xzrpj1yI2bjFI5h9A1hAUlxDZMyr357RVZ9mchpPVC/kzSxXv1iFq5otr1XPRsZRAPQ2rfp0pR+5IUhZ/69r/4Iyvuyejn8L8Lw3DcmkVYsxE5rWJGaGxYkFtABhuRUPKXLhvdmI+cgebpKoBh2ZhzyQq4bjiwM+6CUy+kMcLcYVysgvzgxvd+QHGOuKow5H5wCj/7o4lp3VukziIuDDSoEaaJQEJaPxcQ7sWVJ3ZE4CKXna/vpVbBQojT2Sgshyx/MuiBz74dHw==,iv:0ScpQK2i2DuXe56yhsa8vlFSw6CXsy3TnnVDuy3xMu8=,tag:7j6u5YgNmkXsWa65IUQT6g==,type:str]
+stringData:
+    config.yaml: ENC[AES256_GCM,data:fhF2luy4yZib3glinYrwQdxifaViRJMatE9Vqh8jTLr1DEKVi8deQcIxHd6Yb9Ash0ilnJY+OoiyqtX3h3FDInwZ3fDQ8fTH57aGTkFmn9fvGeZFjIEc9++LYEXfUpRfosl/AaoghfJFiAQAHqEyq6Ksna54F1mIt2zRdoYwCvEYNsBY76qRLscBqH7NEH7a7WWqHbrnVg2QbMpsg8mmHugvgtvouRS1Fr/niKpLVx6TCHsCecIL4Y316IZ3+ASVoG8J9xWR5BzDE8e9Vg3tSe6cx49xOOmgl28WPVNLT0nOxevvvgcL7HWco8gU5n1268VQZOojMe0vJTU047iMrqaXg93nIz0FNamqVe1qgT2CqdfWzgolQ6As8avFzDoZymWq2ymFhyPQUzvQIwpItvqklA==,iv:Fy6lq5bkl9DxZlBPQ+nOwb3oPuAEhJuiLo39APw/cjc=,tag:Q5j9qXfJ/s/2sOgnM2IgZQ==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-03-05T18:36:49Z"
-    mac: ENC[AES256_GCM,data:4VtGdAe0ryQ9bvDrfTmxlh9FfqrET9RUIU+DLxviMZ6VIoqVMovyC9KQr0lT+p4jQTiNcNaMHm2fWmDmrdxUJ6GkrJ17oyrMXaaHmtNDZNIxWFk/2VlxdVtjNYdXQv+grc0JMhyRp1KTZU8QWG+2vZD9ignwkaTQ0WD1DkEmF1E=,iv:ne73beUP/sOlPyAhz9sWbmMkIjfM1/eIxRHVcrYszuc=,tag:45WJNZldwOjP624vVLPvFQ==,type:str]
+    lastmodified: "2022-03-05T21:36:48Z"
+    mac: ENC[AES256_GCM,data:p0D3/UMaJAh0ZRzYXTw74pC+KQRO2Id8PhhIduDE9+9qgI+Hh6pjQkn39j4fWpD0gMgJxL7n5pg+m56gpP96mfUO/+M4czSP673cbIPc2VTHx6yH56zp0nCmLw8q2Md73td/A2Qy/Zs9Tj/mrjeeLHx94RVp+9GIE/TNebDx1kg=,iv:c7YI/JRNuFa6UI8iRX6f9gHIYvEaBDa9H+8T5udn2dw=,tag:DTIIbLzvgAk6SUUV5fsf2w==,type:str]
     pgp:
-        - created_at: "2022-03-05T18:36:48Z"
-          enc: "-----BEGIN PGP MESSAGE-----\r\n\r\nhQIMA7o1G9YUCENaARAArnJCYg2C8KZnJmd6v0fsUS6sgyRw5FIOXxVKTXpo4VMk\r\nOzMtZDIf87rNxUG8eIbVI8WjCO50Pri6HcYELnhdv4/2KjQ4ozEb/Lzps9/9zLoy\r\nhCWBWXTXXrmV/k6lDrAkfIEvpc092FiUH3M3JT0verrBesQfsmBgIPhdaxzPlBCC\r\nPOwXpw7tdSmk9rh4CQRjOKWcvHnTV4DN9NX4d9aQv8CWZbQGfJm48R+nD0F9pgF2\r\nO9+MN8YCXmDQx6MUM2872FZtOrA4itTqK6Vx5thr7ifJMy7QunZPi3zzk7ir3uhE\r\nHFBdoSlgqruwpYIldvk0o63eJ7U/MZscMI8r9MENLiz6egTvTeRSEirU5J5JOxNL\r\nyMcWGa9BrSHOvWNxvKtAvcF7cIDmC3dBUWz6M4qixH/H7G6jWnbG9Gb8ZVhi/mnb\r\ngGawUWdnPnKo5dDDlKUNrvkqdyJFVlEO6kK3sOtLZ8L+b5RUNvDntxB/kFkeIukR\r\n0PFv4pPM2lAGvbfxz4SMU/9WVy8YXqKejvYRCW4zK0jkqQUuo7uovY43VVLWQyvU\r\np+tapXkDz6MkOjS5d8rvkttO0IKZFZruI1fNxh5OmyopKWJCOk3XAK0DqwawMaee\r\nFgCtuwM8NB1kWREj33M7uofWeCDLwX8suyh310x0R+lBbNzxuHpiKfORyqlGG8/U\r\nZgEJAhB9jh6lqiHimDCnc49kJUjML1WUKdRTJQks9y1HXBS9v0dAcs8+CDl92iiP\r\nz0W3fBFrr1PC+bL6dUqmWc7XEBv3wEMnvyZzwZjpD5WYR/gu1RbA3XGoRLkzaSFp\r\ntfakblZiIw==\r\n=Gpzl\r\n-----END PGP MESSAGE-----\r\n"
+        - created_at: "2022-03-05T21:36:46Z"
+          enc: "-----BEGIN PGP MESSAGE-----\r\n\r\nhQIMA7o1G9YUCENaAQ//QWVn6JlnW1G7SMO/f1nVsqVs0L8FoV3YYi5n5UivUOfI\r\nCUVy1CUg2zqtngXKLflNMQKLI/2SG1jMWF4xxs1Fk/QJQouWQumaN1RJAMZnl1Tz\r\nM/0Rlwo40OLVyGycRAYStFKf9572jJspJ/i0OZS/wMhwlvEDEgvK7yrMJQk0FZuY\r\nWcUBFrgDQJnfU+1V4eAxuSOdz2Flryv0b7iUi/NuaIUW++TPo43IjVqMiek6IpCt\r\nn1/BG6VhB1k/kxqx9ul3B2UGVPP0jnq58LyfRW7IDNzlZ89IS2rQe3Uq3fSb+IJO\r\nyBM+IN8ZH6UhzXACEcVHc/fd7j+F8Uw4lQxtlvDUoPjiR/A8eiNmb+UIfpiEOP2S\r\nUHNQOyrEM4qYiaBaKF7wGTZ/V0XQHAaae4/gm371qFstaar7VPDjWDg729NN6YZ6\r\nb58MJXc3/CIEDpQrKOxHfM3Fmh+kkFDSQGa0lzGRMRfVM3oL/I1tygrb1RbwuoTo\r\nwLwUiAjHHIfPp8x8YMLhuYBvRYJtXqdqnEq+Rg89VWtVmXbjgMNfcKBmJUOw48Lm\r\nEj5ejxWC1a4JqbVKzf6YDoNhtgN92cHeS1YMK083v1KkbGvQXNzRiO92/nQUh51Q\r\nO09bh0tSpMJsHO/mtjCrSfIrm9m3joQNRLMDi6jEUTL09aHv1PKMsv+YAPw4MUnU\r\nZgEJAhDG2mr0aIBttG0ZmkG42RxaV0PRheF3n1JpWe0tLSTrI9oUo9oCv+yq6eoc\r\njXJMEUHM1uTAWgRdRT7ey+FYDNlM/mslc3Ch8HznvStXwIEMFK1uDJ3nZHxFh3Yo\r\n2sNuvtETRw==\r\n=2B5R\r\n-----END PGP MESSAGE-----\r\n"
           fp: C9E9F89A87602182D106AF2C1FEEAA0B0634069C
     encrypted_regex: ^(data|stringData)$
     version: 3.7.1
