@@ -33,7 +33,7 @@ spec:
         projected:
           defaultMode: 0775
           sources:
-            - configMap:
+            - secret:
                 name: config-bloopyboii
                 items:
                   - key: config.yaml
