@@ -20,7 +20,7 @@ spec:
   values:
     image:
       repository: gitlab.io/h3mmy/bloopyboi
-      tag: 0.1.1
+      tag: latest
     imagePullPolicy: IfNotPresent
     controller:
       replicas: 1
