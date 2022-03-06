@@ -20,7 +20,7 @@ spec:
   values:
     image:
       repository: registry.gitlab.com/h3mmy/bloopyboi
-      tag: latest
+      tag: 1.1.1
     imagePullPolicy: IfNotPresent
     controller:
       replicas: 1
