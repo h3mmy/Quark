@@ -19,7 +19,7 @@ spec:
       namespace: networking
   values:
     image:
-      repository: gitlab.io/h3mmy/bloopyboi
+      repository: gitlab.com/h3mmy/bloopyboi
       tag: latest
     imagePullPolicy: IfNotPresent
     controller:
