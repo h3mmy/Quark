@@ -24,7 +24,7 @@ spec:
   values:
     image:
       repository: codercom/code-server
-      tag: 4.7.1
+      tag: 4.8.0
     extraVars:
       - name: TZ 
         value: ${TZ}
