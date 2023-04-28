@@ -10,7 +10,7 @@ spec:
     spec:
       # renovate: registryUrl=https://mesosphere.github.io/charts/staging
       chart: traefik-forward-auth
-      version: 0.3.8
+      version: 0.3.9
       sourceRef:
         kind: HelmRepository
         name: mesosphere-staging-charts
